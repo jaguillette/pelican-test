@@ -4,10 +4,10 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content="Pelican" />
-        <title>An article</title>
+        <title>First steps</title>
         <link rel="stylesheet" href="https://jaguillette.github.io/pelican-test/theme/css/main.css" />
         <link href="https://jaguillette.github.io/pelican-test/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pelican Test Atom Feed" />
-        <meta name="description" content="This is an article. I have to have some content to generate a site properly." />
+        <meta name="description" content="Since this is a blog generator, might as well test it with documenting the process of setting it up. I'm set up in a fresh python virtual..." />
 </head>
 
 <body id="index" class="home">
@@ -21,8 +21,8 @@
   <article>
     <header>
       <h1 class="entry-title">
-        <a href="https://jaguillette.github.io/pelican-test/an-article.html" rel="bookmark"
-           title="Permalink to An article">An article</a></h1>
+        <a href="https://jaguillette.github.io/pelican-test/first-steps.html" rel="bookmark"
+           title="Permalink to First steps">First steps</a></h1>
     </header>
 
     <div class="entry-content">
@@ -36,7 +36,15 @@
         </address>
 <p>In <a href="https://jaguillette.github.io/pelican-test/category/misc.html">misc</a>.</p>
 
-</footer><!-- /.post-info -->      <p>This is an article. I have to have some content to generate a site properly.</p>
+</footer><!-- /.post-info -->      <p>Since this is a blog generator, might as well test it with documenting the process of setting it up. I'm set up in a fresh python virtual environment, and so far I've installed the following packages as they've come up:</p>
+<div class="highlight"><pre><span></span><code>pelican
+markdown
+ghp-import
+</code></pre></div>
+
+<p>I set up this repository with <code>pelican-quickstart</code>, and since I knew I wanted to use github pages, I set up my repository as well, so I could set the base url to <code>https://jaguillette.github.io/pelican-test</code> from the jump. I also configured the automation to be set up for deploying to github pages, just following the prompts.</p>
+<p>The first time I ran <code>pelican content</code> to generate the site, it failed and said it couldn't find any files it recognized, but didn't list markdown as something it was looking for, so I ran <code>pip install markdown</code>. After that <code>pelican content</code> and <code>pelican --listen</code> were both happy to run.</p>
+<p>I took a look at the <code>Makefile</code> to see what kinds of options I have. I saw <code>make publish</code>, but that looks like it'll just generate with production settings. <code>make github</code> looked like the ticket, but at first it complained because I didn't have <code>ghp-import</code> (GitHub pages import). Then it complained because I forgot to initialize the repo. I did that and added the remote origin, then ran <code>make github</code> again. That pushed a <code>gh-pages</code> branch to the repo, which happened to be the first branch. That just has the site content. I set up my <code>.gitignore</code>, then pushed the main code to <code>main</code>, which I had to make the default branch since <code>gh-pages</code> was there first. The repo was already set up to deploy though, and looks to work.</p>
     </div><!-- /.entry-content -->
 
   </article>
