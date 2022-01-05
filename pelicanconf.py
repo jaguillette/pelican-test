@@ -3,6 +3,7 @@ SITENAME = 'Pelican Test'
 SITEURL = ''
 
 PATH = 'content'
+OUTPUT_PATH = 'docs'
 
 TIMEZONE = 'America/New_York'
 
