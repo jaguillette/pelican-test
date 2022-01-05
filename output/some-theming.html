@@ -6,10 +6,9 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="author" content="Jeremy Guillette" />
-        <title>Jeremy Guillette</title>
+        <title>Some theming</title>
         
-        <meta name="description" content="Hello world!" />
-        <meta name="keywords" content="Blog "/>
+<meta name="description" content="&lt;p&gt;So the next step is to make the site look like something different. I decided to go with the &lt;a href=&#34;https://github.com/getpelican/pelican-themes/tree/master/backdrop&#34;&gt;Backdrop&lt;/a&gt; theme, which is compiled into the &lt;a href=&#34;https://github.com/getpelican/pelican-themes&#34;&gt;pelican themes repository&lt;/a&gt;. I kind of wanted to go with something more self-contained, but I like the look of this one and wanted to …&lt;/p&gt;" />
 
         <!--[if !IE 7]>
         <style type="text/css">
@@ -37,7 +36,7 @@
                         <ul class="left">
                         </ul>
                         <ul class="right">
-                            <li><a href="/category/misc.html">misc</a></li>
+                            <li class="active"><a href="/category/misc.html">misc</a></li>
                         </ul>
                     </section>
                 </nav>
@@ -51,11 +50,9 @@
             
                 <div id="contents">
 <div class="row">
-    <div class="small-12 columns">
-        <h2>Articles by Jeremy Guillette</h2>
-          <section class="summary">
-    <h3><a href="/some-theming.html" rel="bookmark" title="Permalink to Some theming">Some theming</a></h3>
-    <div class="row info-bar" style="margin-left:0rem;margin-bottom:6px;">
+    <div class="small-12 columns article">
+        <h2>Some theming</h2>
+        <div class="row info-bar" style="margin-left:0rem;margin-bottom:6px;">
     <div class="small-12 columns">
         <ul class="inline-list">
             <li><span><i class="fa fa-calendar"></i>&nbsp; Wed 05 January 2022</span></li>
@@ -63,38 +60,12 @@
         </ul>
     </div>
 </div>
-    <div class="row summary">
-        <div class="small-12 medium-12 columns">
-            <p>So the next step is to make the site look like something different. I decided to go with the <a href="https://github.com/getpelican/pelican-themes/tree/master/backdrop">Backdrop</a> theme, which is compiled into the <a href="https://github.com/getpelican/pelican-themes">pelican themes repository</a>. I kind of wanted to go with something more self-contained, but I like the look of this one and wanted to …</p>
-            <p class='text-right'><a href="/some-theming.html">Continue reading&hellip;</a></p>
-        </div>
-    </div>
-</section>
-  <section class="summary">
-    <h3><a href="/first-steps.html" rel="bookmark" title="Permalink to First steps">First steps</a></h3>
-    <div class="row info-bar" style="margin-left:0rem;margin-bottom:6px;">
-    <div class="small-12 columns">
-        <ul class="inline-list">
-            <li><span><i class="fa fa-calendar"></i>&nbsp; Tue 04 January 2022</span></li>
-            <li><span><i class="fa fa-folder-open"></i>&nbsp; <a href="/category/misc.html">misc</a></span></li>
-        </ul>
-    </div>
-</div>
-    <div class="row summary">
-        <div class="small-12 medium-12 columns">
-            <p>Since this is a blog generator, might as well test it with documenting the process of setting it up. I'm set up in a fresh python virtual environment, and so far I've installed the following packages as they've come up:</p>
-<div class="highlight"><pre><span></span><code>pelican
-markdown
-ghp-import
-</code></pre></div>
-
-<p>I set up this repository with <code>pelican-quickstart …</code></p>
-            <p class='text-right'><a href="/first-steps.html">Continue reading&hellip;</a></p>
-        </div>
-    </div>
-</section>
-
-
+        <section class="article">
+            <p>So the next step is to make the site look like something different. I decided to go with the <a href="https://github.com/getpelican/pelican-themes/tree/master/backdrop">Backdrop</a> theme, which is compiled into the <a href="https://github.com/getpelican/pelican-themes">pelican themes repository</a>. I kind of wanted to go with something more self-contained, but I like the look of this one and wanted to see how to get something less polished to work (this one was made by a grad student for his personal site, but he was nice enough to share).</p>
+<p>I set up a themes repository in my own home folder, per the recommendations of the pelican docs. That set up the whole themes repository on its own, outside of the site folder. That makes me nervous, as it makes things less self-contained, and my <code>pelicanconf.py</code> file now contains an absolute file path that only works on my machine. If I were using this more seriously, I think I'd use the <code>os</code> library to expand <code>~</code> and set a path to the theme more dynamically. It would also be a nice idea to move the whole theme repo into this folder.</p>
+<p>I did run into some difficulties in setting up. At first the site wouldn't generate, compalining that a pagination variable in a template somewhere wasn't defined. I was able to find a fix in <a href="https://github.com/getpelican/pelican-themes/issues/386">this github issue</a>, which I was even able to add to. The thing that I learned that was really valuable was running <code>pelican -v -D content</code> when things are going wrong to better be able to get to the bottom of them. That pointed me to the problem templates, which helped me construct a better pelicanconf setting that doesn't use a deprecated property.</p>
+<p>The background image was also pretty easy to set up. I put a new image in the newly-created "images" folder in content that my <code>pelican content</code> command had been complaining about not being able to find, and setting the background image parameter worked well with a relative link.</p>    
+        </section>
     </div>
 </div>
                 </div>

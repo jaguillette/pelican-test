@@ -26,6 +26,13 @@ SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = False
+PAGINATED_TEMPLATES = {'category': None, 'author': None, 'archives': None}
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+# Theming
+THEME = '/Users/jguillette/gitstuff/pelican-themes/backdrop'
+
+SITESUBTITLE = "Hello world!"
+BACKDROP_IMAGE = "images/nagai_record_store.jpg"

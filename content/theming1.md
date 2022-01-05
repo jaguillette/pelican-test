@@ -1,0 +1,10 @@
+Title: Some theming
+Date: 2022-01-05
+
+So the next step is to make the site look like something different. I decided to go with the [Backdrop](https://github.com/getpelican/pelican-themes/tree/master/backdrop) theme, which is compiled into the [pelican themes repository](https://github.com/getpelican/pelican-themes). I kind of wanted to go with something more self-contained, but I like the look of this one and wanted to see how to get something less polished to work (this one was made by a grad student for his personal site, but he was nice enough to share).
+
+I set up a themes repository in my own home folder, per the recommendations of the pelican docs. That set up the whole themes repository on its own, outside of the site folder. That makes me nervous, as it makes things less self-contained, and my `pelicanconf.py` file now contains an absolute file path that only works on my machine. If I were using this more seriously, I think I'd use the `os` library to expand `~` and set a path to the theme more dynamically. It would also be a nice idea to move the whole theme repo into this folder.
+
+I did run into some difficulties in setting up. At first the site wouldn't generate, compalining that a pagination variable in a template somewhere wasn't defined. I was able to find a fix in [this github issue](https://github.com/getpelican/pelican-themes/issues/386), which I was even able to add to. The thing that I learned that was really valuable was running `pelican -v -D content` when things are going wrong to better be able to get to the bottom of them. That pointed me to the problem templates, which helped me construct a better pelicanconf setting that doesn't use a deprecated property.
+
+The background image was also pretty easy to set up. I put a new image in the newly-created "images" folder in content that my `pelican content` command had been complaining about not being able to find, and setting the background image parameter worked well with a relative link.
