@@ -1,5 +1,6 @@
 Title: First steps
 Date: 2022-01-04
+Category: update
 
 Since this is a blog generator, might as well test it with documenting the process of setting it up. I'm set up in a fresh python virtual environment, and so far I've installed the following packages as they've come up:
 

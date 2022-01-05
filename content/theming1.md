@@ -1,5 +1,6 @@
 Title: Some theming
 Date: 2022-01-05
+Category: update
 
 So the next step is to make the site look like something different. I decided to go with the [Backdrop](https://github.com/getpelican/pelican-themes/tree/master/backdrop) theme, which is compiled into the [pelican themes repository](https://github.com/getpelican/pelican-themes). I kind of wanted to go with something more self-contained, but I like the look of this one and wanted to see how to get something less polished to work (this one was made by a grad student for his personal site, but he was nice enough to share).
 
