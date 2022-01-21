@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Working with Timelines | Jeremy Guillette
+</title>
+  <link rel="canonical" href="/working-with-timelines.html">
+
+
+  <link rel="stylesheet" href="/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="/theme/css/theme.css">
+
+  
+  <meta name="description" content="Earlier today, I was catching up on some of my RSS feeds, and I read an article from Not Even Past on using timelines in college classrooms. The article (by Chris Babits) presents a strong case for the pedagogical goals served by creating a digital timeline assignment. The case is …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+  <div class="col-sm-12">
+    <h1 class="title"><a href="/">Jeremy Guillette</a></h1>
+      <p class="text-muted">That's me! This is my website.</p>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://github.com/jaguillette" target="_blank">Github</a></li>
+          <li class="list-inline-item"><a href="https://twitter.com/jaxguillette" target="_blank">Twitter</a></li>
+              <li class="list-inline-item text-muted">|</li>
+            <li class="list-inline-item"><a href="/">Home</a></li>
+            <li class="list-inline-item"><a href="/pages/lightning-talk.html">Lightning Talk</a></li>
+          <li class="list-inline-item"><a href="/blog.html">Blog</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Working with Timelines
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2017-03-20T00:00:00-04:00">
+          <i class="fas fa-clock"></i>
+          Mon 20 March 2017
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="/category/misc.html">misc</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-user"></i>
+              <a href="/author/jeremy-guillette.html">Jeremy Guillette</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Earlier today, I was catching up on some of my RSS feeds, and I read <a href="http://notevenpast.org/digital-teaching-a-mid-semester-timeline/">an article from Not Even Past</a> on using timelines in college classrooms. The article (by <a href="https://liberalarts.utexas.edu/history/graduate/gradstudents/profile.php?id=cmb5532">Chris Babits</a>) presents a strong case for the pedagogical goals served by creating a digital timeline assignment.</p>
+<p>The case is similar to some that I've heard and made at work, where I do my best to make digital assignments easier. Since it uses open source or freely accessible technologies, I can share some of the things that have made assignments with <a href="https://drive.google.com/drive/folders/0BzL83QaGF5vHbkZzVGNVVUVpUjQ?usp=sharing">Timeline JS</a> easier.</p>
+<p>I've helped with a couple of courses that have had students each contribute a single entry in a timeline, pulling the results together in a timeline as a point of discussion  or study aid. If you want to take that route, Google Forms make things easier.</p>
+<p>In this kind of assignment, it's tempting to have all of the students in a course edit the same Google Sheet, which powers the timeline. If students are editing the spreadsheet themselves, however, the opportunities for error increase exponentially the larger the course.</p>
+<p>To get around that, I've recommended hooking up the spreadsheet to a Google Form. I have a template in <a href="https://drive.google.com/drive/folders/0BzL83QaGF5vHbkZzVGNVVUVpUjQ?usp=sharing">this Google Drive Folder</a>, which you're free to copy and use if you like. Just copy the form into your Google Drive (from the folder, Forms don't have a view only access setting).</p>
+<p>Once you're editing your own copy, make the response spreadsheet by clicking the green spreadsheet-y button (under Responses). As long as you do that to create the responses spreadsheet first, you can change the titles of the form fields, or even take some out, without breaking your setup.</p>
+<p>One downside to using a Google Form is that it's a bit harder to go back and edit a timeline entry. However, it is possible. Just make sure that in the form's settings, respondents can edit their responses. Then, once a student submits their timeline entry, they can click a link to edit their response and bookmark that page, which will preserve their ability to edit that entry.</p>
+<p>Another potential pitfall lies in attributing work to students. I'm as guilty as anyone of assuming that any slick looking system is keeping track of who I am and what I'm doing, but there's no such mechanism built in to the form I've set up. Instead, students have to either add names to their timeline entries themselves, or you can set up an extra form field for them (Timeline JS will just ignore it).</p>
+<p>These are some tricks that I've learned after helping out with a couple of timeline assignments using Timeline JS. Hopefully they help some folks avoid some of the troubles that I've run into, so that they can focus on the real benefits of student collaboration on interactive digital timelines.</p>
+<p>And if you're feeling particularly adventurous, you can check out this <a href="https://github.com/jaguillette/fabulousTime">timeline tool</a> that I frankenstein-ed together from Timeline JS and <a href="http://visjs.org/">visjs</a> to make a timeline monster capable of displaying way more timeline entries in a slightly more comfortable space. It <a href="https://www.xkcd.com/1742/">requires only minimal configuration and tweaking</a>.</p>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="/categories.html">Categories</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>

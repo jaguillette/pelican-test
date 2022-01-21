@@ -1,0 +1,38 @@
+---
+Title: Lightning Talk
+---
+
+- What is it?
+    - It's a static site generator like Jekyll, but it's Python-based
+- Why do I care?
+    - Static sites are good, but I never use ruby so maintaining a Ruby environment is more trouble than it's worth.
+    - I want to encourage people to make static sites for projects so that they can survive benign neglect.
+- How do you get up and running?
+	- `pip install pelican markdown ghp-import`
+	- `pelican-quickstart`
+	- Answer questions about setup, opt in to the make file and enable gh-pages support
+	- Add a post with a title and a date
+	- Add a pages folder
+	- Add an about page to pages folder
+	- generate and view content locally with `pelican content` and `pelican --listen`
+	- set up github repo as remote
+	- change the url in publishconf.py to the url that will match the repo
+	- set up initial commit and push
+	- `make github`
+	- A gh-pages branch has been created with the produced content using the `publishconf.py` settings, and GitHub published that branch as pages. All you have to do is visit the link.
+- Make a site that isn't a blog
+	- Make a new `home.md` page
+	- set `save_as` to 'index.html' and an empty `url` parameter in the front matter
+	- set `DISPLAY_CATEGORIES_ON_MENU` in `pelicanconf.py` to `False`
+	- Blog pages still exist, but aren't in the nav, just pages.
+- Set a theme
+	- Pick a theme from pelican-themes repo (alchemy is pretty good, we'll use backdrop)
+	- make a local copy, either centrally or within the repository
+	- set `THEME` variable in `pelicanconf.py` to the location of the theme folder
+	- build it with `pelican content`
+	- Oh no, it failed with a weird error and we don't know where it's coming from!
+	- To debug: `pelican -v -D content`
+	- To fix this problem: `PAGINATED_TEMPLATES = {'category': None, 'author': None, 'archives': None}`
+	- build with `pelican content` again, and it should now work
+	- Worked, but no backdrop image
+	- `pelicanconf.py` can be used to declare whatever variables you want to use, this one uses `BACKDROP_IMAGE`. We can set that to the location of an image within `content/images`
